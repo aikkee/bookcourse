@@ -108,7 +108,7 @@ def init():
     #bookingForm.location.choices = [('', 'Choose Course')] + [
     #    (l, l) for l in locations]
     course_run = [(r.id, r.description) for r in resources if show_for_booking(r, str(reference.expire_on), rtype)]
-    bookingForm.date_time.choices = [('', 'Choose Course')] + course_run
+    bookingForm.date_time.choices = [('', 'Choose Course Date/Time')] + course_run
     
     bookingForm.booking_ref.data = ref + "**" + course_id
     bookingForm.location.data = course
