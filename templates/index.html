@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel='stylesheet' href='{{ url_for('static', filename='css/bookings.css') }}' />
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+<div class="testbox">
+  <div style="font-family: 'Acme'; font-size: 24px; text-align: center;"><br/>HRP Training Registration</div>
+  <form action="/init" id="retrieveCaseForm">
+      <hr>
+		{% with messages = get_flashed_messages() %}
+      {% if messages %}
+				<div style="margin-left: 10px;font-size:small;">We are unable to register you for this course, please
+					contact HRP Training admin.
+				</div>
+      {% endif %}
+    {% endwith %}
+  <label id="icon" for="name"><i class="icon-envelope"></i></label>
+	<input type="text" name="ref" id="ref" placeholder="<Your work email>" required/>
+  <label id="icon" for="name"><i class="icon-book"></i></label>
+  <select name="mod" id="mod" placeholder="Module" style="width:215px;height:35px;" required>
+		<option value="">All Modules</option>
+		<option value="ATT">Attract</option>
+		<option value="DVP">Develop</option>
+		<option value="PAY">Payroll</option>
+  </select>
+  <label id="icon" for="name"><i class="icon-certificate"></i></label>
+  <select name="course" id="course_select" placeholder="Course" style="width:215px;height:35px;" required>
+  </select>
+	<a href="#" class="button" onclick="document.getElementById('retrieveCaseForm').submit();">Retrieve</a>
+  </form>
+</div>
+
+<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='bookings.js') }}"></script>
+</body> </html>
