@@ -11,7 +11,7 @@
 <body>
 <div class="testbox">
   <div style="font-family: 'Acme'; font-size: 24px; text-align: center;"><br/>HRP Training Registration</div>
-  <form action="/init" id="retrieveCaseForm">
+  <form action="/init" name="retrieveCaseForm" id="retrieveCaseForm">
       <hr>
 		{% with messages = get_flashed_messages() %}
       {% if messages %}
@@ -20,6 +20,7 @@
 				</div>
       {% endif %}
     {% endwith %}
+		<span id="error_msg" style="color:#f00;display:none;">Email and Course are required!<br/></span>
   <label id="icon" for="name"><i class="icon-envelope"></i></label>
 	<input type="text" name="ref" id="ref" placeholder="<Your work email>" required/>
   <label id="icon" for="name"><i class="icon-book"></i></label>
@@ -32,11 +33,24 @@
   <label id="icon" for="name"><i class="icon-certificate"></i></label>
   <select name="course" id="course_select" placeholder="Course" style="width:215px;height:35px;" required>
   </select>
-	<a href="#" class="button" onclick="document.getElementById('retrieveCaseForm').submit();">Retrieve</a>
+	<a href="#" class="button" onclick="if(all_field_filled()) document.getElementById('retrieveCaseForm').submit();">Retrieve</a>
   </form>
 </div>
 
 <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="{{ url_for('static', filename='bookings.js') }}"></script>
+<script>
+	function all_field_filled() {
+		var ref = document.forms["retrieveCaseForm"]["ref"].value;
+		var course = document.forms["retrieveCaseForm"]["course"].value;
+		if (ref == "" || course == "") {
+			document.getElementById("error_msg").style.display="";
+			return false;
+		} else {
+			document.getElementById("error_msg").style.display="None";
+			return true;
+		}
+	}
+</script>
 </body> </html>
