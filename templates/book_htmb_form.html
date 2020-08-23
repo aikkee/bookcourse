@@ -23,7 +23,7 @@
       {% endif %}
     {% endwith %}
 		{{ form.hidden_tag() }}
-		Please select the course run for: <br/><b>{{form.location.data}}</b>:<br/><br/>
+		Please make your Course Date / Time selection for <br/><b>{{form.location.data}}</b>:<br/><br/>
 		<label id="icon" for="name"><i class="icon-calendar"></i></label>
 		{{ form.date_time(id="slot_select") }}
 		<br/><br/>{{ form.hardcopy }} Requires printed training material.
