@@ -240,6 +240,10 @@ def get_courses(email):
 
 def get_course_description(code):
     course = {
+        "CC-CC101":"Navigation & Employee Lifecycle",
+        "CC-CC102":"Organisation & Job Mgmt",
+        "CC-CC103":"Approvals & Authorisations",
+        "CC-CC104":"Substantive Appt & Basic Pay",
         "ATT-GEN102":"Re-Employment",
         "ATT-GEN104":"Part-Time Employment",
         "ATT-MHA106M":"Enlistment Process for HRMG",
