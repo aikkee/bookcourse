@@ -240,10 +240,10 @@ def get_courses(email):
 
 def get_course_description(code):
     course = {
-        "CC-CC101":"Navigation & Employee Lifecycle",
-        "CC-CC102":"Organisation & Job Mgmt",
-        "CC-CC103":"Approvals & Authorisations",
-        "CC-CC104":"Substantive Appt & Basic Pay",
+        "CC-CC101":"Functionalities, Co. & Org. Structure in HRP",
+        "CC-CC102":"Job Mgmt, Data Struct. & Analytics in HRP",
+        "CC-CC103":"Approvals & Authorisations in HRP",
+        "CC-CC104":"Substantive Appt., Payroll Ov. & Basic Pay in HRP",
         "ATT-GEN102":"Re-Employment",
         "ATT-GEN104":"Part-Time Employment",
         "ATT-MHA106M":"Enlistment Process for HRMG",
