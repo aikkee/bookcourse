@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bookings.css') }}" />
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="testbox">
+  <div style="font-family: 'Acme'; font-size: 24px; text-align: center;"><br/>HRP Training Registration</div>
+      <hr>
+			<br/>
+			<div style="margin-left: 10px;">
+				You have indicated interest for the <b>{{message.location}}</b> course.  We will
+				inform you when there is a new course run. 
+			</div>
+			<br/><br/>
+			{% if buttons %}
+				{% autoescape false %}
+   			{% for button in buttons %}
+					<a class="button" href="{{url_for('index') }}">{{button.label}}</a>
+    		{% endfor %}
+				{% endautoescape %}
+			{% endif %}
+</div>
+
+</body></html>
