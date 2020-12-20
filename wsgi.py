@@ -332,7 +332,7 @@ def get_course_description(code):
         "ESS-GEN108":"Leave Administration",
         "PEN-GEN101":"Pension Administration",
         "PEN-GEN102":"Pension Payment Processing",
-        "PAY-GEN101":"Pre-Payroll - Allowance & Deduction Processing and Payroll Retro Adjuster",
+        "PAY-GEN101":"Pre-Payroll: Allowance & Deduction Processing and Payroll Retro Adjuster",
         "PAY-MOE101":"Pre-Payroll - RA, SA and SEP for MOE",
         "PAY-GEN102":"Pre-Payroll - Annual Increment and Non-Performance Related Bonus",
         "PAY-GEN103":"Pre-Payroll - Bank Account Verification Interface (BAV)",
@@ -375,9 +375,23 @@ def get_course_description(code):
         "DVP-LD110":"LD AO Career Roadmap",
         "DVP-LD111A":"LD Alpha Society Membership for Agency HR",
         "DVP-LD111B":"LD Alpha Society Membership for LD AlphaSoc Admin, AlphaSoc Secretaries, Secretary, Treasurers",
-        "DVP-LD112":"LD Appointment"
+        "DVP-LD112":"LD Appointment",
+        "DVP-MHA102A":"Test Administration for MHA",
+        "DVP-MHA102B":"NS Event and Course Assessment",
+        "TD-MHA101":"MHA - Automated Allowance Overview",
+        "TD-MHA102":"MHA - Automated Trainer Allowance Processing",
+        "TD-MHA106":"MHA - Automated NSF Vocation Allowance Processing",
+        "TD-CNB103":"CNB - Automated Skill Allowance Processing",
+        "TD-ICA103":"ICA - Automated Skill Allowance Processing",
+        "TD-SCDF103":"SCDF - Automated Skill Allowance Processing",
+        "TD-SCDF105":"SCDF - Automated Expert Allowance Processing",
+        "TD-SPF103":"SPF - Automated Skill Allowance Processing",
+        "TD-SPS103":"SPS - Automated Skill Allowance Processing",
+        "TD-SPS104":"SPS - Automated Special Allowance Processing"
     }
     return course[code]
+
+
 
 def isValidReference(booking_ref, rtype):
     bRef = Reference.query.filter(and_(Reference.booking_ref==booking_ref,
