@@ -245,6 +245,7 @@ def get_courses(email):
     for r in refs:
         course_codes.append(r.booking_ref.split("**")[1])
 
+    course_codes = list(set(course_codes))
     data = [
             (code+":"+get_course_description(code), get_course_description(code)) for code in course_codes 
     ]
