@@ -302,7 +302,7 @@ def get_course_description(code):
         "PFM-MHA103F":"Ranking & Promotion for NSF",
         "PFM-MHA103M":"Ranking & Promotion for NSmen",
         "PFM-MHA104":"Discipline for NSF and NSmen",
-        "PFM-MHA107":"Blacklist Administration for MHA (NS related)",
+        "PFM-MHA107":"Blacklist Administration for Regular",
         "RWD-PSD101":"Policy Related Compensation & Allowances",
         "RWD-GEN102":"Compensation & Allowances for MRU & MRA (Generic PRP)",
         "RWD-GEN103":"Compensation & Allowances for MRU & MRA (Ministry Specific PRP)",
